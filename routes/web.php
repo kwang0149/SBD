@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BimitsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('bimits/ketua',[BimitsController::class,'index']);
+Route::get('bimits/pengurus',[BimitsController::class,'pengurus']);
+Route::get('bimits/mahasiswa',[BimitsController::class,'mahasiswa']);

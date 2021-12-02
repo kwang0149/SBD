@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>User View Ketua</title>
+        <title>User View Pembina</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     </head>
     <body>
-        <h2 class="text-center">User View Ketua</h2>
+
+        <h2 class="text-center">User View Pembina</h2>
 
         
 
         <br />
         <br />
+<div class="row justify-content-center">
+    <div class="col-auto">
 
-        <div class="row justify-content-center">
-        <div class="col-auto">
-
-                    <h4>Pembina</h4>
+        <h4>Pembina</h4>
             <a href="/pengurus/tambah"> + Tambah Data Baru</a>
       <table class="table table-responsive table-bordered mb-5 pb-5 ">
           
@@ -39,10 +39,9 @@
       </table>
 
 
-
-            <h4>Pengurus</h4>
-            <a href="/pengurus/tambah"> + Tambah Data Baru</a>
-      <table class="table table-responsive table-bordered mb-5 pb-5 ">
+        <h4>Pengurus</h4>
+        <a href="/pengurus/tambah"> + Tambah Data Baru</a>
+        <table class="table table-responsive table-bordered mb-5 pb-5 ">
           
          <tr>
                 <th>Nama</th>
@@ -54,11 +53,11 @@
                 <td>{{ $p->nama  }}</td>
                 <td>{{ $p->nrp }}</td>
                 <td>{{ $p->jabatan  }}</td>
-                <td>
-                    <a class="text-decoration-none" href="/pendapatan/edit/{{ $p->nrp }}">Edit</a>
+                
+                    {{-- <a class="text-decoration-none" href="/pendapatan/edit/{{ $p->nrp }}">Edit</a>
                     |
-                    <a class="text-decoration-none" href="/pendapatan/hapus/{{ $p->nrp }}">Hapus</a>
-                </td>
+                    <a class="text-decoration-none" href="/pendapatan/hapus/{{ $p->nrp }}">Hapus</a> --}}
+
             </tr>
             @endforeach
       </table>
@@ -75,11 +74,11 @@
             <tr>
                 <td>{{ $a->nama  }}</td>
                 <td>{{ $a->nrp }}</td>
-                <td>
+                {{-- <td>
                     <a class="text-decoration-none" href="/pendapatan/edit/{{ $a->nrp }}">Edit</a>
                     |
                     <a class="text-decoration-none" href="/pendapatan/hapus/{{ $a->nrp }}">Hapus</a>
-                </td>
+                </td> --}}
             </tr>
             @endforeach
         </table>
@@ -103,11 +102,11 @@
                 <td>{{ $m->tempat_tanggal_lahir}}</td>
                 <td>{{ $m->alamat_lengkap}}</td>
                 <td>{{ $m->departemen}}</td>
-                <td>
+                {{-- <td>
                     <a class="text-decoration-none" href="/pendapatan/edit/{{ $a->nrp }}">Edit</a>
                     |
                     <a class="text-decoration-none" href="/pendapatan/hapus/{{ $a->nrp }}">Hapus</a>
-                </td>
+                </td> --}}
             </tr>
             @endforeach
         </table>
@@ -131,11 +130,11 @@
                 <td>{{ $p->nrp_pengurus }}</td>
                 <td>{{ $p->nip }}</td>
                 <td>{{ $p->durasi_dalam_jam }}</td>
-                <td>
+                {{-- <td>
                     <a class="text-decoration-none" href="/pendapatan/edit/{{ $a->nrp }}">Edit</a>
                     |
                     <a class="text-decoration-none" href="/pendapatan/hapus/{{ $a->nrp }}">Hapus</a>
-                </td>
+                </td> --}}
             </tr>
             @endforeach
         </table>
@@ -155,11 +154,11 @@
                 <td>{{ $po->nrp_pengurus  }}</td>
                 <td>{{ $po->nama_pengurus }}</td>
 
-                <td>
+                {{-- <td>
                     <a class="text-decoration-none" href="/pendapatan/edit/{{ $a->nrp }}">Edit</a>
                     |
                     <a class="text-decoration-none" href="/pendapatan/hapus/{{ $a->nrp }}">Hapus</a>
-                </td>
+                </td> --}}
             </tr>
             @endforeach
         </table>
@@ -185,15 +184,18 @@
                 <td>{{ $po->motivasi }}</td>
                 <td>{{ $po->durasi_dalam_menit }}</td>
 
-                <td>
+                {{-- <td>
                     <a class="text-decoration-none" href="/pendapatan/edit/{{ $a->nrp }}">Edit</a>
                     |
                     <a class="text-decoration-none" href="/pendapatan/hapus/{{ $a->nrp }}">Hapus</a>
-                </td>
+                </td> --}}
             </tr>
             @endforeach
         </table>
+        
     </div>
   </div>
+        
     </body>
 </html>
+

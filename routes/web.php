@@ -21,3 +21,4 @@ Route::get('/', function () {
 Route::get('bimits/ketua',[BimitsController::class,'index']);
 Route::get('bimits/pengurus',[BimitsController::class,'pengurus']);
 Route::get('bimits/mahasiswa',[BimitsController::class,'mahasiswa']);
+Route::get('bimits/pembina',[BimitsController::class,'pembina']);

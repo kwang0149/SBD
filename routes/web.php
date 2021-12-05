@@ -22,3 +22,13 @@ Route::get('bimits/ketua',[BimitsController::class,'index']);
 Route::get('bimits/pengurus',[BimitsController::class,'pengurus']);
 Route::get('bimits/mahasiswa',[BimitsController::class,'mahasiswa']);
 Route::get('bimits/pembina',[BimitsController::class,'pembina']);
+
+Route::get('bimits/tambahPengurus',[BimitsController::class,'tambahPengurus']);
+
+Route::post('bimits/simpan-data',[BimitsController::class,'storePengurus']);
+
+Route::get('bimits/edit-pengurus/{nrp}',[BimitsController::class,'editPengurus']);
+
+Route::post('bimits/update-pengurus',[BimitsController::class,'updatePengurus']);
+
+Route::get('/bimits/hapus-pengurus/{nrp}',[BimitsController::class, 'hapusPengurus']);

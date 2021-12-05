@@ -6,17 +6,14 @@
     </head>
     <body>
         <h2 class="text-center">User View Ketua</h2>
-
-        
-
         <br />
         <br />
 
         <div class="row justify-content-center">
         <div class="col-auto">
 
-                    <h4>Pembina</h4>
-            <a href="/pengurus/tambah"> + Tambah Data Baru</a>
+            <h4>Pembina</h4>
+            <a href="bimits/tambahPengurus"> + Tambah Data Baru</a>
       <table class="table table-responsive table-bordered mb-5 pb-5 ">
           
          <tr>
@@ -41,7 +38,7 @@
 
 
             <h4>Pengurus</h4>
-            <a href="/pengurus/tambah"> + Tambah Data Baru</a>
+            <a href="/bimits/tambahPengurus"> + Tambah Data Baru</a>
       <table class="table table-responsive table-bordered mb-5 pb-5 ">
           
          <tr>
@@ -55,9 +52,9 @@
                 <td>{{ $p->nrp }}</td>
                 <td>{{ $p->jabatan  }}</td>
                 <td>
-                    <a class="text-decoration-none" href="/pendapatan/edit/{{ $p->nrp }}">Edit</a>
+                    <a class="text-decoration-none" href="/bimits/edit-pengurus/{{ $p->nrp }}">Edit</a>
                     |
-                    <a class="text-decoration-none" href="/pendapatan/hapus/{{ $p->nrp }}">Hapus</a>
+                    <a class="text-decoration-none" href="/bimits/hapus-pengurus/{{ $p->nrp }}">Hapus</a>
                 </td>
             </tr>
             @endforeach

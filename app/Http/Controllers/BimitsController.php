@@ -82,5 +82,42 @@ class BimitsController extends Controller
     );
     }
 
+    public function tambahPengurus(){
+        return view ("pengurus.tambah");
+    }
+
+     public function storePengurus(Request $request)
+    {
+        DB::table('table_pengurus')->insert([
+            'nama' => $request->nama,
+            'nrp' => $request->nrp,
+            'jabatan' => $request->jabatan
+        ]);
+        return redirect('/bimits/ketua');
+    }
+
+        public function editPengurus($nrp)
+    {
+        $pengurus = DB::table('table_pengurus')->where('nrp', $nrp)->get();
+        return view('pengurus.edit', ['table_pengurus' => $pengurus]);
+    }
     
+     public function updatePengurus(Request $request)
+    {
+        DB::table('table_pengurus')->where('nrp', $request->nrp)->update([
+            'nama' => $request->nama,
+            'nrp' => $request->nrp,
+            'jabatan' => $request->jabatan
+        ]);
+        return redirect('/bimits/ketua');
+    }
+
+
+    public function hapusPengurus($nrp)
+    {
+
+        DB::table('table_pengurus')->where('nrp', $nrp)->delete();
+
+        return redirect('/bimits/ketua');
+    }
 }

@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Database BIMITS</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    </head>
-    <body>
+@extends('layout/happy')
+
+    @section('title',"User View Mahasiswa")
+    @section('konten')
+
+
         <h2 class="text-center">User View Mahasiswa</h2>
 
         <br />
@@ -12,7 +11,7 @@
 
 <div class="row justify-content-center">
     <div class="col-auto">
-      <table class="table table-responsive table-bordered mb-5 pb-5">
+      <table class="table table-responsive table-bordered mb-5 pb-5 table-striped">
         
             <tr>
                 <th>NRP</th>
@@ -42,5 +41,5 @@
 {{-- mahasiswa --}}
          
 
-    </body>
-</html>
+
+@endsection
